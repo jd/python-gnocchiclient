@@ -13,6 +13,8 @@
 
 import re
 
+import six
+
 
 class ClientException(Exception):
     """The base exception class for all exceptions this library raises."""
@@ -237,10 +239,11 @@ def from_response(response, method=None):
                 # Gnocchi json
                 desc = body.get('description')
                 if desc:
-                    for enhanced_cls in enhanced_classes:
-                        if enhanced_cls.match.match(desc):
-                            cls = enhanced_cls
-                            break
+                    if isinstance(desc, six.text_type):
+                        for enhanced_cls in enhanced_classes:
+                            if enhanced_cls.match.match(desc):
+                                cls = enhanced_cls
+                                break
                 kwargs['message'] = desc
             elif isinstance(body, dict) and isinstance(body.get("error"),
                                                        dict):
