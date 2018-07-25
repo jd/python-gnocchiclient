@@ -13,8 +13,6 @@
 #    License for the specific language governing permissions and limitations
 #    under the License.
 
-import keystoneauth1.session
-
 from gnocchiclient import client
 from gnocchiclient.v1 import aggregates
 from gnocchiclient.v1 import archive_policy
@@ -25,6 +23,8 @@ from gnocchiclient.v1 import metric
 from gnocchiclient.v1 import resource
 from gnocchiclient.v1 import resource_type
 from gnocchiclient.v1 import status
+
+import keystoneauth1.session
 
 
 class Client(object):

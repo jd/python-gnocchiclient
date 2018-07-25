@@ -13,10 +13,11 @@
 #    under the License.
 import json
 
-from requests import models
-import testtools
-
 from gnocchiclient import exceptions
+
+from requests import models
+
+import testtools
 
 
 class ExceptionsTest(testtools.TestCase):

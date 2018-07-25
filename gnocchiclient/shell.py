@@ -20,9 +20,6 @@ import warnings
 
 from cliff import app
 from cliff import commandmanager
-from keystoneauth1 import adapter
-from keystoneauth1 import exceptions
-from keystoneauth1 import loading
 
 from gnocchiclient import auth
 from gnocchiclient import benchmark
@@ -37,6 +34,10 @@ from gnocchiclient.v1 import resource_cli
 from gnocchiclient.v1 import resource_type_cli
 from gnocchiclient.v1 import status_cli
 from gnocchiclient.version import __version__
+
+from keystoneauth1 import adapter
+from keystoneauth1 import exceptions
+from keystoneauth1 import loading
 
 
 class GnocchiCommandManager(commandmanager.CommandManager):

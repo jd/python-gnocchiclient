@@ -12,9 +12,9 @@
 #    License for the specific language governing permissions and limitations
 #    under the License.
 
-import testtools
-
 from gnocchiclient import auth
+
+import testtools
 
 
 class GnocchiBasicPluginTest(testtools.TestCase):

@@ -13,18 +13,19 @@
 
 import datetime
 
-import iso8601
-import ujson
-
 from gnocchiclient import utils
 from gnocchiclient.v1 import base
+
+import iso8601
+
+import ujson
 
 
 class AggregatesManager(base.Manager):
     def fetch(self, operations, search=None,
               resource_type='generic', start=None, stop=None, granularity=None,
               needed_overlap=None, groupby=None, fill=None, details=False):
-        """Get measurements of an aggregated metrics
+        """Get measurements of an aggregated metrics.
 
         :param operations: operations
         :type operations: list or str
@@ -48,7 +49,6 @@ class AggregatesManager(base.Manager):
         of *query dictionary*
         http://docs.openstack.org/developer/gnocchi/rest.html#aggregates
         """
-
         if isinstance(start, datetime.datetime):
             start = start.isoformat()
         if isinstance(stop, datetime.datetime):

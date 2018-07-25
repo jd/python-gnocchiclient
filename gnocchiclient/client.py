@@ -11,10 +11,10 @@
 #    under the License.
 import sys
 
+from gnocchiclient import exceptions
+
 from keystoneauth1 import adapter
 from keystoneauth1 import exceptions as k_exc
-
-from gnocchiclient import exceptions
 
 
 def Client(version, *args, **kwargs):
