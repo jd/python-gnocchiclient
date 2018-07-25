@@ -14,6 +14,7 @@
 import json
 
 from requests import models
+
 import testtools
 
 from gnocchiclient import exceptions
